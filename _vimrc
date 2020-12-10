@@ -93,6 +93,9 @@ Plugin 'mattn/emmet-vim'
 " Plugin 'Chiel92/vim-autoformat'
 " Plugin 'axiaoxin/vim-json-line-format'
 Plugin 'benmills/vimux'
+Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'kshenoy/vim-signature'
 
 " 插件列表结束
 call vundle#end()
@@ -104,7 +107,7 @@ set background=dark
 colorscheme torte
 
 " NERDTree config
-map <F2> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 " autocmd vimenter * NERDTree " auto open NERDTree
 
@@ -113,25 +116,27 @@ let g:vim_markdown_folding_disabled = 1
 " let g:airline_powerline_fonts = 1  
 " let g:airline#extensions#tabline#left_sep = ' '
 
-noremap <F3> :Autoformat<CR>
-noremap R :source $MYVIMRC<CR>
+" nnoremap <F3> :Autoformat<CR>
+nnoremap S :source $MYVIMRC<CR>
 inoremap jk <esc>
 
-" set guifont=Menlo\ for\ Powerline
 
 map <F1> <Nop>
-noremap s <Nop>
-noremap S <Nop>
+nnoremap s <Nop>
 
 " Smart way to move between windows
-" map <C-j> <C-W>j
-" map <C-k> <C-W>k
+map <C-j> <C-W>j
+map <C-k> <C-W>k
 " map <C-h> <C-W>h
 " map <C-l> <C-W>l
+map <C-h> :tabp<CR>
+map <C-l> :tabn<CR>
+nnoremap tn :tabnew 
 
-noremap <C-h> :tabp<CR>
-noremap <C-l> :tabn<CR>
-noremap tn :tabnew 
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-K> <C-U>
+nnoremap <space> za
 
 
 " let g:autoformat_verbosemode=1 "开启详细模式便于查错
@@ -142,3 +147,26 @@ noremap tn :tabnew
 "let g:autoformat_remove_trailing_spaces = 0
 "autocmd FileType vim,tex let b:autoformat_autoindent=0
 "gg=G :retab :RemoveTrailingSpaces
+
+let mapleader = "-"
+nnoremap <leader>ev :tabnew $MYVIMRC<cr>
+
+" hybrid temp table to be clean
+iabbrev torder tmp_meta_order_query
+iabbrev tgrade tmp_meta_member_grade
+
+" nnoremap <leader>" ea"<esc>hbi"<esc>
+" nnoremap <leader>' ea'<esc>hbi'<esc>
+
+" nnoremap <leader>d dd
+" nnoremap <buffer> <leader>x dd
+
+
+
+
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
