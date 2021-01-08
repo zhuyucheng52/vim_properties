@@ -31,6 +31,9 @@ set hlsearch
 set incsearch
 set nowrapscan
 
+" undo目录
+set undodir=/Users/zhuyucheng/.vim/undodir
+
 " 显示匹配
 set showmatch
 
@@ -96,6 +99,7 @@ Plugin 'benmills/vimux'
 Plugin 'terryma/vim-multiple-cursors'
 " Plugin 'kien/ctrlp.vim'
 Plugin 'kshenoy/vim-signature'
+Plugin 'farmergreg/vim-lastplace'
 
 " 插件列表结束
 call vundle#end()
@@ -154,6 +158,7 @@ nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 " hybrid temp table to be clean
 iabbrev torder tmp_meta_order_query
 iabbrev tgrade tmp_meta_member_grade
+iabbrev tmobile (CASE WHEN c.mobile_modified IS NOT NULL AND TRIM(c.mobile_modified) <> '' THEN c.mobile_modified ELSE c.mobile END) AS
 
 " nnoremap <leader>" ea"<esc>hbi"<esc>
 " nnoremap <leader>' ea'<esc>hbi'<esc>
