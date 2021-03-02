@@ -7,6 +7,9 @@ let g:coc_global_extensions = ['coc-tsserver','coc-html','coc-css', 'coc-json',
 
 " if hidden is not set, TextEdit might fail.
 set hidden
+set hlsearch
+set incsearch
+set ic
 
 " Some servers have issues with backup files, see #649
 set nobackup
