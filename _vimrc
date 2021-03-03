@@ -200,6 +200,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'voldikss/vim-floaterm'
 
+" 中文输入法
+Plug 'vim-scripts/fcitx.vim'
+
 " Initialize plugin system
 call plug#end()
 "}}}
