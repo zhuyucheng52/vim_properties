@@ -251,7 +251,7 @@ set lazyredraw
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-runtime colors/desert.vim
+runtime colors/morning.vim
 
 
 " nnoremap <F3> :Autoformat<CR>
