@@ -203,6 +203,12 @@ Plug 'voldikss/vim-floaterm'
 " 中文输入法
 Plug 'vim-scripts/fcitx.vim'
 
+" sigin
+Plug 'kshenoy/vim-signature'
+
+" multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " Initialize plugin system
 call plug#end()
 "}}}
