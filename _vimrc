@@ -10,6 +10,7 @@ set hidden
 set hlsearch
 set incsearch
 set ic
+set undodir=/Users/user/.vim/undodir
 
 " Some servers have issues with backup files, see #649
 set nobackup
@@ -209,6 +210,10 @@ Plug 'kshenoy/vim-signature'
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'farmergreg/vim-lastplace'
+
+Plug 'tpope/vim-surround'
+
 " Initialize plugin system
 call plug#end()
 "}}}
@@ -269,7 +274,7 @@ inoremap jk <esc>
 
 
 map <F1> <Nop>
-nnoremap s <Nop>
+" nnoremap s <Nop>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
