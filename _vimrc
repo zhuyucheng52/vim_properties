@@ -10,7 +10,7 @@ set hidden
 set hlsearch
 set incsearch
 set ic
-set undodir=/Users/user/.vim/undodir
+set undodir=~/.vim/undodir
 
 " Some servers have issues with backup files, see #649
 set nobackup
