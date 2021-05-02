@@ -292,6 +292,7 @@ cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 cnoremap <C-K> <C-U>
 " nnoremap <space> za
+vnoremap Y "+Y
 
 
 
